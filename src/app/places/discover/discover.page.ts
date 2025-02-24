@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-discover',
+  standalone: false,
   templateUrl: './discover.page.html',
   styleUrls: ['./discover.page.scss'],
 })
