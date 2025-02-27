@@ -4,14 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlacesPage } from './places.page';
 
 const routes: Routes = [
-  {
-    path: 'tabs/discover/:placeId',
-    loadChildren: () => import('./discover/place-detail/place-detail.module').then(m => m.PlaceDetailPageModule)
-  },
-  {
-    path: 'tabs/offers/:placeId',
-    loadChildren: () => import('./offers/offer-bookings/offer-bookings.module').then(m => m.OfferBookingsPageModule)
-  },
+  // {
+  //   path: 'tabs/discover/:placeId',
+  //   loadChildren: () => import('./discover/place-detail/place-detail.module').then(m => m.PlaceDetailPageModule)
+  // },
+  // {
+  //   path: 'tabs/offers/:placeId',
+  //   loadChildren: () => import('./offers/offer-bookings/offer-bookings.module').then(m => m.OfferBookingsPageModule)
+  // },
   {
     path: 'tabs',
     component: PlacesPage,
