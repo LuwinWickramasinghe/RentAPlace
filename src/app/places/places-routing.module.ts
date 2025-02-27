@@ -5,16 +5,12 @@ import { PlacesPage } from './places.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: PlacesPage
+    path: 'tabs/discover/:placeId',
+    loadChildren: () => import('./discover/place-detail/place-detail.module').then(m => m.PlaceDetailPageModule)
   },
   {
-    path: 'discover',
-    loadChildren: () => import('./discover/discover.module').then( m => m.DiscoverPageModule)
-  },
-  {
-    path: 'offers',
-    loadChildren: () => import('./offers/offers.module').then( m => m.OffersPageModule)
+    path: 'tabs/offers/:placeId',
+    loadChildren: () => import('./offers/offer-bookings/offer-bookings.module').then(m => m.OfferBookingsPageModule)
   },
   {
     path: 'tabs',
@@ -53,9 +49,19 @@ const routes: Routes = [
             loadChildren: () => import('./offers/offer-bookings/offer-bookings.module').then(m => m.OfferBookingsPageModule)
           }
         ]
+      },
+      {
+        path: '',
+        redirectTo: '/places/tabs/discover',
+        pathMatch: 'full'
       }
     ]
-  }
+  },
+  {
+    path: '',
+    redirectTo: 'tabs/discover',
+    pathMatch:'full',
+  },
 
 ];
 

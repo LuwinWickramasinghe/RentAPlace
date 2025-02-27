@@ -11,6 +11,9 @@ export class PlaceDetailPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      document.querySelector('app-discover')?.removeAttribute('aria-hidden');
+    }, 500);
   }
 
 }
