@@ -14,7 +14,7 @@ const routes: Routes = [
   // },
   {
     path: 'tabs',
-    component: PlacesPage,
+    // component: PlacesPage,
     children: [
       {
         path: 'discover',
